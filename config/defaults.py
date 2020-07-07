@@ -69,7 +69,7 @@ _C.INPUT.COTOUT_PROB = 0.5
 # -----------------------------------------------------------------------------
 _C.DATASETS = CN()
 # Root dir of dataset
-_C.DATASETS.ROOT_DIR = "../../../input/global-wheat-detection"
+_C.DATASETS.ROOT_DIR = "root/input/global-wheat-detection"
 # Fold to validate
 _C.DATASETS.VALID_FOLD = 0
 # # List of the dataset names for training, as present in paths_catalog.py
