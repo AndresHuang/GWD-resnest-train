@@ -1,0 +1,61 @@
+2020-07-07 10:27:13,969 wheatdetection INFO: Using 1 GPUS
+2020-07-07 10:27:13,969 wheatdetection INFO: Namespace(config_file='', opts=[])
+2020-07-07 10:27:13,969 wheatdetection INFO: Running with config:
+DATALOADER:
+  NUM_WORKERS: 2
+DATASETS:
+  ROOT_DIR: /home/hyx/repo/wheatdetection/datasets/global-wheat-detection
+  VALID_FOLD: 0
+DEBUG: False
+INPUT:
+  BC_B: 0.2
+  BC_C: 0.2
+  BC_PROB: 0.9
+  COLOR_PROB: 0.9
+  COTOUT_FILL_VALUE: 0
+  COTOUT_MAX_H_SIZE: 64
+  COTOUT_MAX_W_SIZE: 64
+  COTOUT_NUM_HOLES: 8
+  COTOUT_PROB: 0.5
+  HFLIP_PROB: 0.5
+  HSV_H: 0.2
+  HSV_PROB: 0.9
+  HSV_S: 0.2
+  HSV_V: 0.2
+  RSC_HEIGHT: 1024
+  RSC_MIN_MAX_HEIGHT: (800, 800)
+  RSC_PROB: 0.5
+  RSC_WIDTH: 1024
+  TOFGRAY_PROB: 0.01
+  VFLIP_PROB: 0.5
+MODEL:
+  DEVICE: cuda
+  NUM_CLASSES: 2
+OUTPUT_DIR: /home/hyx/repo/wheatdetection/experiments/baseline
+SEED: 42
+SOLVER:
+  BASE_LR: 0.005
+  BIAS_LR_FACTOR: 1
+  CLEAR_OUTPUT: True
+  COS_CPOCH: 2
+  EARLY_STOP_PATIENCE: 20
+  IMS_PER_BATCH: 1
+  MAX_EPOCHS: 72
+  MOMENTUM: 0.9
+  OPTIMIZER_NAME: SGD
+  SCHEDULER_NAME: CosineAnnealingWarmRestarts
+  TRAIN_CHECKPOINT: False
+  T_MUL: 2
+  WARMUP_EPOCHS: 10
+  WEIGHT_DECAY: 0.0005
+  WEIGHT_DECAY_BIAS: 0
+  WEIGHT_DECAY_BN: 0
+TEST:
+  IMS_PER_BATCH: 1
+  WEIGHT: /home/hyx/repo/wheatdetection/output/best-checkpoint.bin
+VERBOSE: True
+2020-07-07 10:27:17,814 wheatdetection INFO: Fitter prepared. Device is cuda
+2020-07-07 10:27:17,814 wheatdetection INFO: Start training
+2020-07-07 10:27:17,815 wheatdetection INFO: 
+2020-07-07T02:27:17.815280
+LR: 0.0005
