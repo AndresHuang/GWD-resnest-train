@@ -4,7 +4,7 @@
 @contact: wuxin.wang@whu.edu.cn
 """
 import sys
-sys.path.insert(0, "/home/hyx/repo/wheatdetection/external/yacs")
+sys.path.insert(0, "/kaggle/working/GWD-resnest-train/external/yacs")
 from yacs.config import CfgNode as CN
 
 # -----------------------------------------------------------------------------
@@ -69,7 +69,7 @@ _C.INPUT.COTOUT_PROB = 0.5
 # -----------------------------------------------------------------------------
 _C.DATASETS = CN()
 # Root dir of dataset
-_C.DATASETS.ROOT_DIR = "/home/hyx/repo/wheatdetection/datasets/global-wheat-detection"
+_C.DATASETS.ROOT_DIR = "../../input/global-wheat-detection"
 # Fold to validate
 _C.DATASETS.VALID_FOLD = 0
 # # List of the dataset names for training, as present in paths_catalog.py
@@ -120,9 +120,9 @@ _C.SOLVER.IMS_PER_BATCH = 1
 # see 2 images per batch
 _C.TEST = CN()
 _C.TEST.IMS_PER_BATCH = 1
-_C.TEST.WEIGHT = "/home/hyx/repo/wheatdetection/output/best-checkpoint.bin"
+_C.TEST.WEIGHT = "/kaggle/working/GWD-resnest-train/output/best-checkpoint.bin"
 
 # ---------------------------------------------------------------------------- #
 # Misc options
 # ---------------------------------------------------------------------------- #
-_C.OUTPUT_DIR = "/home/hyx/repo/wheatdetection/experiments/baseline"
+_C.OUTPUT_DIR = "/kaggle/working/GWD-resnest-train/experiments/baseline"

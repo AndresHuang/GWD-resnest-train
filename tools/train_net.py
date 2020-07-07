@@ -8,7 +8,7 @@ import argparse
 import os
 import sys
 from os import mkdir
-sys.path.append('/home/hyx/repo/wheatdetection/')
+sys.path.append('/kaggle/working/GWD-resnest-train/')
 from config import cfg
 from data import make_data_loader
 from engine.fitter import Fitter
