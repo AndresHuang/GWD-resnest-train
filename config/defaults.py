@@ -114,12 +114,12 @@ _C.SOLVER.CLEAR_OUTPUT = True
 # Number of images per batch
 # This is global, so if we have 8 GPUs and IMS_PER_BATCH = 16, each GPU will
 # see 2 images per batch
-_C.SOLVER.IMS_PER_BATCH = 1
+_C.SOLVER.IMS_PER_BATCH = 4
 
 # This is global, so if we have 8 GPUs and IMS_PER_BATCH = 16, each GPU will
 # see 2 images per batch
 _C.TEST = CN()
-_C.TEST.IMS_PER_BATCH = 1
+_C.TEST.IMS_PER_BATCH = 4
 _C.TEST.WEIGHT = "/kaggle/working/GWD-resnest-train/output/best-checkpoint.bin"
 
 # ---------------------------------------------------------------------------- #
