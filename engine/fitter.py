@@ -79,14 +79,16 @@ class Fitter:
                 self.best_score_threshold = best_score_threshold
                 self.model.eval()
                 self.save(f'{self.base_dir}/best-checkpoint.bin')
-                self.save_model(f'{self.base_dir}/best-model.bin')
+                self.save_model(f'{self.base_dir}/best-model-{self.epoch}.bin')
                 self.save_predictions(f'{self.base_dir}/all_predictions.csv')
 
             self.early_stop(best_final_score)
             if self.early_stop_epochs > self.config.SOLVER.EARLY_STOP_PATIENCE:
                 self.logger.info('Early Stopping!')
                 break
-
+            
+            if self.epoch % 5 == 0:
+                self.save_model(f'{self.base_dir}/checkpoint-{self.epoch}.bin')
             # if self.epoch % self.config.SOLVER.CLEAR_OUTPUT == 0:
             #     output.clear()
 
