@@ -78,8 +78,6 @@ class Fitter:
                 self.best_final_score = best_final_score
                 self.best_score_threshold = best_score_threshold
                 self.model.eval()
-                if self.epoch % 5 ==0:
-                    self.save_model(f'{self.base_dir}/epoch{self.epoch}model.pt')
                 self.save(f'{self.base_dir}/best-checkpoint.bin')
                 self.save_model(f'{self.base_dir}/best-model.bin')
                 self.save_predictions(f'{self.base_dir}/all_predictions.csv')
