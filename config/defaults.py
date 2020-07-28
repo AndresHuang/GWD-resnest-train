@@ -93,7 +93,7 @@ _C.SOLVER.SCHEDULER_NAME = "CosineAnnealingWarmRestarts"
 _C.SOLVER.COS_CPOCH = 2
 _C.SOLVER.T_MUL = 2
 
-_C.SOLVER.MAX_EPOCHS = 36
+_C.SOLVER.MAX_EPOCHS = 60
 
 _C.SOLVER.BASE_LR = 0.005
 _C.SOLVER.BIAS_LR_FACTOR = 1
@@ -106,7 +106,7 @@ _C.SOLVER.WEIGHT_DECAY_BN = 0
 
 _C.SOLVER.WARMUP_EPOCHS = 10
 
-_C.SOLVER.EARLY_STOP_PATIENCE = 20
+_C.SOLVER.EARLY_STOP_PATIENCE = 50
 
 _C.SOLVER.TRAIN_CHECKPOINT = False
 _C.SOLVER.CLEAR_OUTPUT = True
@@ -114,12 +114,12 @@ _C.SOLVER.CLEAR_OUTPUT = True
 # Number of images per batch
 # This is global, so if we have 8 GPUs and IMS_PER_BATCH = 16, each GPU will
 # see 2 images per batch
-_C.SOLVER.IMS_PER_BATCH = 4
+_C.SOLVER.IMS_PER_BATCH = 2
 
 # This is global, so if we have 8 GPUs and IMS_PER_BATCH = 16, each GPU will
 # see 2 images per batch
 _C.TEST = CN()
-_C.TEST.IMS_PER_BATCH = 4
+_C.TEST.IMS_PER_BATCH = 2
 _C.TEST.WEIGHT = "/kaggle/working/GWD-resnest-train/output/best-checkpoint.bin"
 
 # ---------------------------------------------------------------------------- #

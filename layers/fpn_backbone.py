@@ -6,14 +6,14 @@
 import sys
 sys.path.insert(0, "/content/drive/My Drive/global-wheat-detection/code/wheatdetection/external/pytorch-image-models")
 # from timm.models.resnest import resnest101e
-from resnest.torch import resnest269
+from resnest.torch import resnest200
 from torchvision.models import resnet
 from torchvision.models.detection.backbone_utils import BackboneWithFPN
 from torchvision.ops import misc as misc_nn_ops
 
 def fpn_backbone(pretrained, norm_layer=misc_nn_ops.FrozenBatchNorm2d, trainable_layers=3):
     # backbone = resnet.__dict__['resnet18'](pretrained=pretrained,norm_layer=norm_layer)
-    backbone = resnest269(pretrained=True)
+    backbone = resnest200(pretrained=True)
     # select layers that wont be frozen
     assert trainable_layers <= 5 and trainable_layers >= 0
     layers_to_train = ['layer4', 'layer3', 'layer2', 'layer1', 'conv1'][:trainable_layers]
